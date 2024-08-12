@@ -12,10 +12,6 @@ func sum(nums ...int) {
 	fmt.Println(total)
 }
 
-func myprint(args ...interface{}) {
-	fmt.Println("args: ", args)
-}
-
 func main() {
 
 	sum(1, 2)
@@ -23,6 +19,4 @@ func main() {
 
 	nums := []int{1, 2, 3, 4}
 	sum(nums...)
-
-	myprint("2", 23, true)
 }
