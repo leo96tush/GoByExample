@@ -1,0 +1,18 @@
+# Installation
+# Remove old versions of Go. Run the following command in WSL Ubuntu:
+sudo rm -rf /usr/local/go* && sudo rm -rf /usr/local/go	
+
+
+# Download Golang Package and Extract (1.18 Version here)
+wget https://go.dev/dl/go1.18.linux-amd64.tar.gz
+tar -xvf go1.18.linux-amd64.tar.gz
+mv go go-1.18
+sudo mv go-1.18 /usr/local
+
+# Add Go to our environment profile so that it can get picked up by our command line
+export GOROOT=/usr/local/go-1.18
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# Check the Go Installed Version
+go version
